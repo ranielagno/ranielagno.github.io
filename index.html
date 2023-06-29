@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta http-equiv='cache-control' content='no-cache'> 
+        <meta http-equiv='expires' content='0'> 
+        <meta http-equiv='pragma' content='no-cache'>
+    </head>
+    
+    <h1>Lightning Out POC</h1>
+    <script src="https://raniel-agno-dev-ed.lightning.force.com/lightning/lightning.out.js"></script>
+    <div userId="00Q1l000008OUHaEAO"/>
+    <div data-lightning-out="true"></div>
+
+  <script>
+
+    const userIdFromSurroundingPageDiv = document.querySelector("[userId]");
+    const userIdFromSurroundingPage = userIdFromSurroundingPageDiv.getAttribute("userId");
+
+    const appName = 'c:RaiseRequestAuraWrapper';
+    const componentName = 'c:raiseRequestCaseList';
+
+    <!-- lightningEndpoint requires a terminal '/' character, otherwise this will not work -->
+    const lightningEndpoint = 'https://raniel-agno-dev-ed.my.site.com/testbuildyourown/';
+    
+    const targetElement = document.querySelector("[data-lightning-out]");
+    const componentAttributes = {
+      firstName: userIdFromSurroundingPage
+    };
+
+    
+
+    $Lightning.use(
+            appName,
+            function (){
+              $Lightning.createComponent(
+                      componentName,
+                      componentAttributes,
+                      targetElement,
+                      function (cmp){
+                        console.log('lightning component created');
+                      }
+              );
+            },
+            lightningEndpoint
+    );
+
+
+  </script>
+</html>
