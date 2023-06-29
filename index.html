@@ -6,7 +6,7 @@
     </head>
     
     <h1>Lightning Out POC</h1>
-    <script src="https://raniel-agno-dev-ed.lightning.force.com/lightning/lightning.out.js"></script>
+    <script src="https://raniel-agno-dev-ed.my.site.com/testbuildyourown/lightning/lightning.out.js"></script>
     <div data-lightning-out="true"></div>
 
   <script>
@@ -14,7 +14,9 @@
     const appName = 'c:RaiseRequestAuraWrapper';
     const componentName = 'c:raiseRequestCaseList';
 
-    const lightningEndpoint = 'https://raniel-agno-dev-ed.my.site.com/testbuildyourown/';
+    const lightningEndpoint = 'https://raniel-agno-dev-ed.my.site.com/testbuildyourown';
+    
+    console.log("lightningEndpoint >>", lightningEndpoint);
     
     const targetElement = document.querySelector("[data-lightning-out]");
     const componentAttributes = {
