@@ -6,7 +6,7 @@
         <meta http-equiv='expires' content='0'> 
         <meta http-equiv='pragma' content='no-cache'>
          
-        <script src="https://qiagen--qa.sandbox.my.site.com/myrequests/lightning/lightning.out.js"></script>
+        <script src="https://qiagen.my.site.com/myrequests/lightning/lightning.out.js"></script>
 
     </head>
     
@@ -21,14 +21,12 @@
                 const appName = 'c:RaiseRequestAuraWrapper';
                 const componentName = 'c:raiseRequestMain';
                 
-                const lightningEndpoint = 'https://qiagen--qa.sandbox.my.site.com/myrequests/';
+                const lightningEndpoint = 'https://qiagen.my.site.com/myrequests/';
 
                 const targetElement = document.querySelector("[data-lightning-out]");
                 const componentAttributes = {};
 
-                const authToken = '00D7E000000AlAQ!AQQAQMoD.Ur5isiyq0zLi.bnknIznE0llxBMNnNzJwRsFJ_r25to9uksBe_fX5dWvZpVWmCH58LyMz1Yjn369cEh5SFJhxeg';
-
-                console.log('authToken', authToken);
+                const authToken = '';
 
                 $Lightning.use(
                         appName,
