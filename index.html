@@ -18,31 +18,37 @@
 
             function loadLightningOut() {
 
-                const appName = 'c:RaiseRequestAuraWrapper';
-                const componentName = 'c:raiseRequestMain';
-                
-                const lightningEndpoint = 'https://qiagen--qa.sandbox.my.site.com/myrequests/';
+                try {
 
-                const targetElement = document.querySelector("[data-lightning-out]");
-                const componentAttributes = {};
+                    const appName = 'c:RaiseRequestAuraWrapper';
+                    const componentName = 'c:raiseRequestMain';
+                    
+                    const lightningEndpoint = 'https://qiagen--qa.sandbox.my.site.com/myrequests/';
 
-                const authToken = '';
+                    const targetElement = document.querySelector("[data-lightning-out]");
+                    const componentAttributes = {};
 
-                $Lightning.use(
-                        appName,
-                        function() {
-                            $Lightning.createComponent(
-                                    componentName,
-                                    componentAttributes,
-                                    targetElement,
-                                    function (cmp){
-                                        console.log('lightning component created');
-                                    }
-                            );
-                        },
-                        lightningEndpoint,
-                        authToken
-                );
+                    const authToken = '';
+
+                    $Lightning.use(
+                            appName,
+                            function() {
+                                $Lightning.createComponent(
+                                        componentName,
+                                        componentAttributes,
+                                        targetElement,
+                                        function (cmp){
+                                            console.log('lightning component created');
+                                        }
+                                );
+                            },
+                            lightningEndpoint,
+                            authToken
+                    );
+
+                } catch(e) {
+                    console.error("Error >> ", e);
+                }
 
             }
 
