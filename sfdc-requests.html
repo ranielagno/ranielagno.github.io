@@ -10,6 +10,8 @@
         <meta http-equiv='expires' content='0'> 
         <meta http-equiv='pragma' content='no-cache'>
         
+        <script src="https://qiagen--qa.sandbox.my.site.com/myrequests/lightning/lightning.out.js"></script>
+
     </head>
     
     <body onload="loadLightningOut()">
@@ -33,11 +35,23 @@
                     const authToken = '00D9Z000000uIyL!AQEAQH9jmkQvd2SbJaR2foxrk.brnULgYqEbK5qZ.H0SDP1BG19e_vOLmrQf51aewUBej3ZgxrJ.fB9WwM.TwvZ..BB6eBg9';
 
                     console.log("loadLightningOut");
-
-                    var script = document.createElement('script');
-                    script.src = 'https://qiagen--qa.sandbox.my.site.com/myrequests/lightning/lightning.out.js';
-                    document.head.appendChild(script); 
                     
+                    $Lightning.use(
+                            appName,
+                            function() {
+                                $Lightning.createComponent(
+                                        componentName,
+                                        componentAttributes,
+                                        targetElement,
+                                        function (cmp){
+                                            console.log('lightning component created');
+                                        }
+                                );
+                            },
+                            lightningEndpoint,
+                            authToken
+                    );
+
                     $Lightning.use(
                             appName,
                             function() {
@@ -56,22 +70,6 @@
 
                 } catch(e) {
                     console.error("Error >> ", e);
-
-                    $Lightning.use(
-                            appName,
-                            function() {
-                                $Lightning.createComponent(
-                                        componentName,
-                                        componentAttributes,
-                                        targetElement,
-                                        function (cmp){
-                                            console.log('lightning component created');
-                                        }
-                                );
-                            },
-                            lightningEndpoint,
-                            authToken
-                    );
                 }
 
             }
