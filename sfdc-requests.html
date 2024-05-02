@@ -56,6 +56,22 @@
 
                 } catch(e) {
                     console.error("Error >> ", e);
+
+                    $Lightning.use(
+                            appName,
+                            function() {
+                                $Lightning.createComponent(
+                                        componentName,
+                                        componentAttributes,
+                                        targetElement,
+                                        function (cmp){
+                                            console.log('lightning component created');
+                                        }
+                                );
+                            },
+                            lightningEndpoint,
+                            authToken
+                    );
                 }
 
             }
