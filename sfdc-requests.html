@@ -32,26 +32,10 @@
                     const targetElement = document.querySelector("[data-lightning-out]");
                     const componentAttributes = {};
 
-                    const authToken = '00D9Z000000uIyL!AQEAQH9jmkQvd2SbJaR2foxrk.brnULgYqEbK5qZ.H0SDP1BG19e_vOLmrQf51aewUBej3ZgxrJ.fB9WwM.TwvZ..BB6eBg9';
+                    const authToken = '';
 
                     console.log("loadLightningOut");
                     
-                    $Lightning.use(
-                            appName,
-                            function() {
-                                $Lightning.createComponent(
-                                        componentName,
-                                        componentAttributes,
-                                        targetElement,
-                                        function (cmp){
-                                            console.log('lightning component created');
-                                        }
-                                );
-                            },
-                            lightningEndpoint,
-                            authToken
-                    );
-
                     $Lightning.use(
                             appName,
                             function() {
