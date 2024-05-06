@@ -9,14 +9,14 @@
         <meta http-equiv='cache-control' content='no-cache'> 
         <meta http-equiv='expires' content='0'> 
         <meta http-equiv='pragma' content='no-cache'>
-        
-        <script src="https://qiagen--qa.sandbox.my.site.com/myrequests/lightning/lightning.out.js"></script>
 
     </head>
     
     <body onload="loadLightningOut()">
 
         <div data-lightning-out="true"></div>
+        
+        <script src="https://qiagen--qa.sandbox.my.salesforce.com/lightning/lightning.out.js"></script>
 
         <script>
 
@@ -27,7 +27,7 @@
                     const appName = 'c:RaiseRequestAuraWrapper';
                     const componentName = 'c:raiseRequestMain';
                     
-                    const lightningEndpoint = 'https://qiagen--qa.sandbox.my.site.com/myrequests/';
+                    const lightningEndpoint = 'https://qiagen--qa.sandbox.lightning.force.com';
 
                     const targetElement = document.querySelector("[data-lightning-out]");
                     const componentAttributes = {};
