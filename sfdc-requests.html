@@ -16,13 +16,16 @@
 
         <div data-lightning-out="true"></div>
         
-        <script src="https://qiagen.lightning.force.com/lightning/lightning.out.js"></script>
+        <script crossorigin="anonymous" src="https://qiagen.lightning.force.com/lightning/lightning.out.js"></script>
 
         <script>
 
             function loadLightningOut() {
 
                 try {
+
+                    let headers = new Headers();
+                    headers.append('Access-Control-Allow-Origin', '*');
 
                     const appName = 'c:RaiseRequestAuraWrapper';
                     const componentName = 'c:raiseRequestMain';
