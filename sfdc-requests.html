@@ -33,8 +33,9 @@
                     const componentAttributes = {};
 
                     const authToken = '00D9Z000000uIyL!AQEAQC4NsD5r9aPY7TFqmFhZygNpoL_JR8bp2zzudtv8z6uEtIttZI1qxe4qPYphqBI9c1eM_PRJimkCGUy.5A3lMUcU3zFf';
+                    const sid = '00D9Z000000uIyL!AQEAQLrMynmdspTRMQdjzO0392cZ6PPZTnObKZy_CbN5ExtIrZ1bwChteuVnSQjWUOiTZSAZHmUqX5BtcovZqbCP380BgTN0';
 
-                    console.log("loadLightningOut");
+                    console.log("loadLightningOut", document.cookie);
                     
                     $Lightning.use(
                             appName,
@@ -49,7 +50,7 @@
                                 );
                             },
                             lightningEndpoint,
-                            authToken
+                            sid
                     );
 
                 } catch(e) {
