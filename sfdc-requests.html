@@ -16,26 +16,23 @@
 
         <div data-lightning-out="true"></div>
         
-        <script src="https://myrequests.qiagen.com/lightning/lightning.out.js"></script>
+        <script src="https://qiagen--qa.sandbox.my.site.com/myrequests/lightning/lightning.out.js"></script>
 
         <script>
 
             function loadLightningOut() {
 
                 try {
-                    /*
-                    let headers = new Headers();
-                    headers.append('Access-Control-Allow-Origin', '*');
-                    */
+                    
                     const appName = 'c:RaiseRequestAuraWrapper';
                     const componentName = 'c:raiseRequestMain';
                     
-                    const lightningEndpoint = 'https://myrequests.qiagen.com';
+                    const lightningEndpoint = 'https://qiagen--qa.sandbox.my.site.com/myrequests';
 
                     const targetElement = document.querySelector("[data-lightning-out]");
                     const componentAttributes = {};
 
-                    const authToken = '00D9Z000000uIyL!AQEAQBXBvGlcO1Nulj2NqP_5GEY6U6W1MCHBgxkXyVZNaxLnwgrzFaDRFYpfd8oiPYKVsALi4MP82QY6ALBYxiNNOChdrPvI';
+                    const authToken = '00D9Z000000uIyL!AQEAQAIl4L8zUniY38BvgWEOzjXmxDIjIBitwhU6VMxCgXxg9Cdu9GQrFLKZBIVxmqOBX_0MN5FvPgng.UohXu.VjnrcPSkP';
 
                     console.log("loadLightningOut");
                     
